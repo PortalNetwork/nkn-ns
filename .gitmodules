@@ -1,0 +1,3 @@
+[submodule "nkn"]
+	path = nkn
+	url = https://github.com/nknorg/nkn.git
