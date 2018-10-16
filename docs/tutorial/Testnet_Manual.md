@@ -1,4 +1,4 @@
-# NKN local node deployment using docker
+# NKN local node building from source code
 
 ## Prerequisites
 
