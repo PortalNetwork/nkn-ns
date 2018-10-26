@@ -163,7 +163,7 @@ In this tutorial, we want to make our own node become part of the testnet, so we
 ```
 ![testnetLocal](./assets/testnetLocal.png)
 
-## Resources
+## 🔗 Resources
 - [Deep dive of NKN](https://medium.com/nknetwork/deep-dive-into-nkn-system-architecture-41c0ac4c925e)
 - [Proof of Relay](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Proof-of-Relay-%28PoR%29)
 - [NKN consensus](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Consensus-and-Blockchain)
