@@ -26,11 +26,28 @@ NNS is the NKN Name Service, a distributed, open, and extensible naming system b
 - [Integration](./docs/INTEGRATION.md)
 
 ## 🗂️ NKN Technical Stack
+The NKN technical stacks show the abstractions in different layers, and the layers in the picture below start from the top and constructed down along with the y-axis.
+For example, the identity component is built upon on NKN core.
 ![NKN Tech Stack](./assets/NKN-layer.png)
+
+### State Layer
+
 ![State Layer](./assets/state_layer.png)
+
+### Component Layer
+
 ![Component Layer](./assets/component_layer.png)
+
+### Protocol Layer
+
 ![Protocol Layer](./assets/protocol_layer.png)
+
+### User Control Layer
+
 ![User Control Layer](./assets/user_control_layer.png)
+
+### Application Layer
+
 ![Application Layer](./assets/application_layer.png)
 
 # Introduction
