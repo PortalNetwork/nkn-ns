@@ -31,8 +31,6 @@ Block is proposed by the selected leader in each round. Proposed block is sent t
 In the PoR algorithm, the bookkeeper candidate vote is not a vote of a person or IP address, but a vote of a signature chain. If any malicious node wants to control NKN, it must have enough active channels (signature chain) under control. The larger scale of NKN the more difficult it is to control. 
 
 ## Reference
-[Deep dive of NKN](https://medium.com/nknetwork/deep-dive-into-nkn-system-architecture-41c0ac4c925e)
-
-[Proof of Relay](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Proof-of-Relay-%28PoR%29)
-
-[NKN consensus](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Consensus-and-Blockchain)
+- [Deep dive of NKN](https://medium.com/nknetwork/deep-dive-into-nkn-system-architecture-41c0ac4c925e)
+- [Proof of Relay](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Proof-of-Relay-%28PoR%29)
+- [NKN consensus](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Consensus-and-Blockchain)
