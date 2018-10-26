@@ -52,6 +52,125 @@ Block is proposed by the selected leader in each round. Proposed block is sent t
 
 In the PoR algorithm, the bookkeeper candidate vote is not a vote of a person or IP address, but a vote of a signature chain. If any malicious node wants to control NKN, it must have enough active channels (signature chain) under control. The larger scale of NKN the more difficult it is to control. 
 
+## Start NKN using docker
+
+### Prerequisites
+
+- Clone NKN project.
+```
+git clone https://github.com/nknorg/nkn.git
+```
+- `Docker` installed.
+
+### Build using docker
+
+1. Change current directory to `nkn` project.
+```
+cd nkn
+```
+
+2. Build dokcer image.
+```
+docker build -t nkn .
+```
+
+3. After docker image built successfully, we need to prepare a configuration file for starting a node. There are two default configuration files in `nkn` project:
+- `config.testnet.json`: used to join the testnet.
+- `config.local.json`: create and join a private chain on your localhost.
+In this tutorial, we want to make our own node become part of the testnet, so we will choose `config.testnet.json` as configuration file.
+    ```
+    cp config.testnet.json config.json
+    ```
+    And open the `config.json` file:
+![configure](./assets/configure.png)
+    - Replace `Hostname` with your IP address.
+    ### Note:
+    NKN needs a public static IP or set up [port forwarding](https://portforward.com/) on your router properly to join the testnet.
+
+4. Before starting the node, we need to create a new wallet first:
+```
+docker run -it -v $PWD:/nkn nkn nknc wallet -c
+```
+![wallet](./assets/wallet.png)
+
+5. After wallet created, we can start to deploy local node:
+```
+docker run -p 30000-30003:30000-30003 -v $PWD:/nkn --name nkn --rm -it nkn nknd
+```
+![testnet](./assets/testnet.png)
+
+## Start NKN manual
+
+### Prerequisites
+
+- [Go 1.10+](https://golang.org/doc/install) installed.
+
+- `$GOROOT` and `$GOPATH` environment variable configured.
+    ```
+    export GOROOT=$(go env GOROOT)
+    export GOPATH=$(go env GOPATH)
+    export GOBIN=$GOPATH/bin
+    export PATH=$PATH:$GOBIN
+    ```
+
+- Create directory $GOPATH/src/github.com/nknorg/ if not exists.
+    ```
+    mkdir -p $GOPATH/src/github.com/nknorg
+    ```
+
+### Building from source
+
+1. Clone [nkn](https://github.com/nknorg/nkn) project to `$GOPATH/src/github.com/nknorg/`.
+```
+cd $GOPATH/src/github.com/nknorg/
+git clone https://github.com/nknorg/nkn.git
+```
+
+2. Install package management tool `glide`.
+```
+cd nkn
+make glide
+```
+
+3. Download dependency module and build project.
+```
+make vendor
+make
+```
+
+4. After source code built successfully, we need to prepare a configuration file for starting a node. There are two default configuration files in `nkn` project:
+- `config.testnet.json`: used to join the testnet.
+- `config.local.json`: create and join a private chain on your localhost.
+In this tutorial, we want to make our own node become part of the testnet, so we will choose `config.testnet.json` as configuration file.
+    ```
+    cp config.testnet.json config.json
+    ```
+    And open the `config.json` file:
+![configure](./assets/configure.png)
+    - Replace `Hostname` with your IP address.
+    ### Note:
+    NKN needs a public static IP or set up [port forwarding](https://portforward.com/) on your router properly to join the testnet.
+
+5. Before starting the node, we need to create a new wallet first:
+```
+./nknc wallet -c
+```
+![walletLocal](./assets/walletLocal.png)
+
+6. After wallet created, we can start to deploy local node:
+```
+./nknd
+```
+![testnetLocal](./assets/testnetLocal.png)
+
+## Resources
+- [Deep dive of NKN](https://medium.com/nknetwork/deep-dive-into-nkn-system-architecture-41c0ac4c925e)
+- [Proof of Relay](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Proof-of-Relay-%28PoR%29)
+- [NKN consensus](https://github.com/nknorg/nkn/wiki/Tech-Design-Doc%3A-Consensus-and-Blockchain)
+- [nkn-client-js](https://github.com/nknorg/nkn-client-js)
+- [nkn-client-protocol](https://github.com/nknorg/nkn/wiki/NKN-Client-Protocol)
+- [NKN docker](https://github.com/nknorg/nkn#building-using-docker)
+
 ## 📣 Contributing
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to help out.
 
