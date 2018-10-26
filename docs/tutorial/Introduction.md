@@ -87,5 +87,5 @@ The above is a simple example of interchange messages between two different clie
 Each NKN client has a designated NKN node it should establish websocket connection depending on the client NKN address. Trying to connect to other nodes will get an error. During initialization, client should make a JSON-RPC call to rpc server to get the node it should establish websocket connection with.
 
 ## Reference
-[nkn-client-js](https://github.com/nknorg/nkn-client-js)
-[NKN-Client-Protocol](https://github.com/nknorg/nkn/wiki/NKN-Client-Protocol)
+- [nkn-client-js](https://github.com/nknorg/nkn-client-js)
+- [NKN-Client-Protocol](https://github.com/nknorg/nkn/wiki/NKN-Client-Protocol)
