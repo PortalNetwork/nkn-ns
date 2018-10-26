@@ -25,8 +25,13 @@ NNS is the NKN Name Service, a distributed, open, and extensible naming system b
     - [Resolver](./docs/RESOLVER.md)
 - [Integration](./docs/INTEGRATION.md)
 
-## 🗂️ Technical Stack
+## 🗂️ NKN Technical Stack
 ![NKN Tech Stack](./assets/NKN-layer.png)
+![State Layer](./assets/state_layer.png)
+![Component Layer](./assets/component_layer.png)
+![Protocol Layer](./assets/protocol_layer.png)
+![User Control Layer](./assets/user_control_layer.png)
+![Application Layer](./assets/application_layer.png)
 
 # Introduction
 
