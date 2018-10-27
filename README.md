@@ -27,15 +27,15 @@ NNS is the NKN Name Service, a distributed, open, and extensible naming system b
 
 ## 🗂️ NKN Technical Stack
 The NKN technical stacks show the abstractions in different layers, and the layers in the picture below start from the top and constructed down along with the y-axis.
-For example, the identity component is built upon on NKN core.
+For example, the identity component in the component layer is built upon on the state layer which is NKN core.
 ![NKN Tech Stack](./assets/NKN-layer.png)
 
 ### State Layer
-
+The decentralized network stores the state information of each digital identity which usually based on different PKI system, every transactions and behavior can be stored and owned by the users. NKN core serves the fundamental infrastructure of the state layer. From this layer down each layer is built based on this infrastructure network.
 ![State Layer](./assets/state_layer.png)
 
 ### Component Layer
-
+The component layer is the abstraction of certain smart contract patterns or standards. Such as non-fungible assets which have some basic interfaces and many metadata describing the associated object. Those implementations behind the scenes are certain persistent scripts running on the core which provided by the state layer.
 ![Component Layer](./assets/component_layer.png)
 
 ### Protocol Layer
