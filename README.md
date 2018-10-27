@@ -39,15 +39,15 @@ The component layer is the abstraction of certain smart contract patterns or sta
 ![Component Layer](./assets/component_layer.png)
 
 ### Protocol Layer
-
+NKN name service utilizes BNS protocol containing the specifications towards registrar, registry and resolver, it can greatly ease the development obstacles and allow more possibilities built upon on the interfaces.
 ![Protocol Layer](./assets/protocol_layer.png)
 
 ### User Control Layer
-
+The user control layer describes the key of user adoption, if no well-designed interface for users to manage their wallet and sign transactions, a user will have to interact with the decentralized services and applications with command line interface. There are many solutions to make the user adoption growth, such as the NEO wallet, browser extension and so on.
 ![User Control Layer](./assets/user_control_layer.png)
 
 ### Application Layer
-
+Applications built on the NKN decentralized network stacks unleased unlimited use cases and capacities. Such as fund rasing, trading, and game fields, each participants can control their data and experience the services at the same time. There will be more powerful services coming out as the stack matures.
 ![Application Layer](./assets/application_layer.png)
 
 # Introduction
