@@ -26,11 +26,28 @@ NNS is the NKN Name Service, a distributed, open, and extensible naming system b
 - [Integration](./docs/INTEGRATION.md)
 
 ## 🗂️ NKN Technical Stack
+The NKN technical stacks show the abstractions in different layers, and the layers in the picture below start from the top and constructed down along with the y-axis.
+For example, the identity component in the component layer is built upon on the state layer which is NKN core.
 ![NKN Tech Stack](./assets/NKN-layer.png)
+
+### State Layer
+The decentralized network stores the state information of each digital identity which usually based on different PKI system, every transactions and behavior can be stored and owned by the users. NKN core serves the fundamental infrastructure of the state layer. From this layer down each layer is built based on this infrastructure network.
 ![State Layer](./assets/state_layer.png)
+
+### Component Layer
+The component layer is the abstraction of certain smart contract patterns or standards. Such as non-fungible assets which have some basic interfaces and many metadata describing the associated object. Those implementations behind the scenes are certain persistent scripts running on the core which provided by the state layer.
 ![Component Layer](./assets/component_layer.png)
+
+### Protocol Layer
+NKN name service utilizes BNS protocol containing the specifications towards registrar, registry and resolver, it can greatly ease the development obstacles and allow more possibilities built upon on the interfaces.
 ![Protocol Layer](./assets/protocol_layer.png)
+
+### User Control Layer
+The user control layer describes the key of user adoption, if no well-designed interface for users to manage their wallet and sign transactions, a user will have to interact with the decentralized services and applications with command line interface. There are many solutions to make the user adoption growth, such as the NEO wallet, browser extension and so on.
 ![User Control Layer](./assets/user_control_layer.png)
+
+### Application Layer
+Applications built on the NKN decentralized network stacks unleased unlimited use cases and capacities. Such as fund rasing, trading, and game fields, each participants can control their data and experience the services at the same time. There will be more powerful services coming out as the stack matures.
 ![Application Layer](./assets/application_layer.png)
 
 # Introduction
